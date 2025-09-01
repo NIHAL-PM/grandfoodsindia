@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Grand Foods India Product Management</title>
+    <meta name="description" content="Admin panel for managing Grand Foods India product catalog. Internal use for product management and updates." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/vendor/tabler-icons.min.css">
+    <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="./index.html" class="brand">
+                    <img src="./assets/img/Grands-Logo-Vector.svg" alt="Grand Tastes" class="logo">
+                </a>
+                <nav class="nav">
+                    <a href="./index.html">Home</a>
+                    <a href="./products.html">Products</a>
+                    <a href="./about.html">About</a>
+                    <a href="./contact.html">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="container" style="padding:60px 20px;">
+        <h1>Admin Panel - Grand Foods India</h1>
+        <div class="admin-tabs" style="display:flex;gap:16px;margin:32px 0;border-bottom:2px solid #333;">
+            <button class="tab-btn active" data-tab="products" style="padding:12px 24px;border:none;background:#007d83;color:white;border-radius:8px 8px 0 0;">Products</button>
+            <button class="tab-btn" data-tab="content" style="padding:12px 24px;border:none;background:#333;color:white;border-radius:8px 8px 0 0;">Site Content</button>
+            <button class="tab-btn" data-tab="team" style="padding:12px 24px;border:none;background:#333;color:white;border-radius:8px 8px 0 0;">Team</button>
+        </div>
+
+        <!-- Products Tab -->
+        <div id="products-tab" class="tab-content">
+            <section id="product-list" style="margin-top:32px;">
+                <h2>Current Products</h2>
+                <div id="admin-product-grid" class="category-grid"></div>
+            </section>
+            <section id="add-product" style="margin-top:48px;">
+                <h2>Add/Edit Product</h2>
+                <form id="product-form">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="img">Image Path (e.g., ./assets/img/products/NAME.png)</label>
+                        <input type="text" id="img" required>
+                    </div>
+                    <div class="field">
+                        <label for="net">Net Weight</label>
+                        <input type="text" id="net" required>
+                    </div>
+                    <div class="field">
+                        <label for="shelf">Shelf Life (days)</label>
+                        <input type="number" id="shelf" required>
+                    </div>
+                    <div class="field">
+                        <label for="cat">Category</label>
+                        <select id="cat" required>
+                            <option value="Muffins">Muffins</option>
+                            <option value="Biscuits & Cookies">Biscuits & Cookies</option>
+                            <option value="Chikkis">Chikkis</option>
+                            <option value="Snacks">Snacks</option>
+                        </select>
+                    </div>
+                    <input type="hidden" id="edit-index">
+                    <button type="submit" class="btn btn-victoria">Save Product</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Site Content Tab -->
+        <div id="content-tab" class="tab-content" style="display:none;">
+            <section style="margin-top:32px;">
+                <h2>Hero Section</h2>
+                <form id="hero-form">
+                    <div class="field">
+                        <label for="hero-title">Hero Title</label>
+                        <input type="text" id="hero-title" placeholder="e.g. Deliciously Different">
+                    </div>
+                    <div class="field">
+                        <label for="hero-subtitle">Hero Subtitle</label>
+                        <textarea id="hero-subtitle" placeholder="Hero description text..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-victoria">Save Hero Content</button>
+                </form>
+            </section>
+
+            <section style="margin-top:48px;">
+                <h2>Company Information</h2>
+                <form id="company-form">
+                    <div class="field">
+                        <label for="company-name">Company Name</label>
+                        <input type="text" id="company-name" placeholder="Grand Foods India">
+                    </div>
+                    <div class="field">
+                        <label for="company-description">Company Description</label>
+                        <textarea id="company-description" placeholder="Company description for footer..."></textarea>
+                    </div>
+                    <div class="field">
+                        <label for="company-phone">Phone Number</label>
+                        <input type="text" id="company-phone" placeholder="+91 96862 81458">
+                    </div>
+                    <div class="field">
+                        <label for="company-email">Email Address</label>
+                        <input type="email" id="company-email" placeholder="grandfoodsindia1@gmail.com">
+                    </div>
+                    <div class="field">
+                        <label for="company-address">Address</label>
+                        <textarea id="company-address" placeholder="The Grand Foods, Bangalore, India"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-victoria">Save Company Info</button>
+                </form>
+            </section>
+
+            <section style="margin-top:48px;">
+                <h2>Social Media Links</h2>
+                <form id="social-form">
+                    <div class="field">
+                        <label for="instagram-url">Instagram URL</label>
+                        <input type="url" id="instagram-url" placeholder="https://www.instagram.com/grandfoodsindia">
+                    </div>
+                    <div class="field">
+                        <label for="facebook-url">Facebook URL</label>
+                        <input type="url" id="facebook-url" placeholder="https://www.facebook.com/grandfoodsindia">
+                    </div>
+                    <div class="field">
+                        <label for="linkedin-url">LinkedIn URL</label>
+                        <input type="url" id="linkedin-url" placeholder="https://www.linkedin.com/company/grandfoodsindia">
+                    </div>
+                    <div class="field">
+                        <label for="maps-url">Google Maps URL</label>
+                        <input type="url" id="maps-url" placeholder="https://maps.google.com/...">
+                    </div>
+                    <button type="submit" class="btn btn-victoria">Save Social Links</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Team Tab -->
+        <div id="team-tab" class="tab-content" style="display:none;">
+            <section style="margin-top:32px;">
+                <h2>Leadership Team</h2>
+                <div id="team-list" style="display:grid;gap:16px;margin:24px 0;"></div>
+                <form id="team-form">
+                    <h3>Add/Edit Team Member</h3>
+                    <div class="field">
+                        <label for="member-name">Full Name</label>
+                        <input type="text" id="member-name" required>
+                    </div>
+                    <div class="field">
+                        <label for="member-title">Position/Title</label>
+                        <input type="text" id="member-title" required placeholder="e.g. Chairman, CEO, etc.">
+                    </div>
+                    <div class="field">
+                        <label for="member-description">Description</label>
+                        <textarea id="member-description" placeholder="Brief description of their role..."></textarea>
+                    </div>
+                    <div class="field">
+                        <label for="member-initials">Initials (for avatar)</label>
+                        <input type="text" id="member-initials" maxlength="3" placeholder="e.g. RG">
+                    </div>
+                    <input type="hidden" id="member-edit-index">
+                    <button type="submit" class="btn btn-victoria">Save Team Member</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script src="./assets/js/admin.js"></script>
+</body>
+</html>

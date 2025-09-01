@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Grand Foods India - Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #0c0f0f; color: #fff; }
+        .test-item { margin: 10px 0; padding: 10px; border: 1px solid #333; border-radius: 5px; }
+        .pass { border-color: #4CAF50; background: rgba(76, 175, 80, 0.1); }
+        .fail { border-color: #f44336; background: rgba(244, 67, 54, 0.1); }
+        .pending { border-color: #ff9800; background: rgba(255, 152, 0, 0.1); }
+    </style>
+</head>
+<body>
+    <h1>Grand Foods India - Site Test</h1>
+    <div id="test-results">
+        <div class="test-item pending" id="test-1">
+            <strong>Test 1:</strong> Check if main files exist
+            <div id="result-1">Testing...</div>
+        </div>
+        <div class="test-item pending" id="test-2">
+            <strong>Test 2:</strong> Check if GSAP loads from CDN
+            <div id="result-2">Testing...</div>
+        </div>
+        <div class="test-item pending" id="test-3">
+            <strong>Test 3:</strong> Check if CSS loads properly
+            <div id="result-3">Testing...</div>
+        </div>
+        <div class="test-item pending" id="test-4">
+            <strong>Test 4:</strong> Check if video fallback works
+            <div id="result-4">Testing...</div>
+        </div>
+    </div>
+
+    <script>
+        // Test 1: Check if main files exist
+        const checkFile = async (url) => {
+            try {
+                const response = await fetch(url);
+                return response.ok;
+            } catch {
+                return false;
+            }
+        };
+
+        async function runTests() {
+            // Test 1: Check files
+            const files = [
+                './index.html',
+                './assets/css/styles.css',
+                './assets/js/main.js',
+                './assets/js/index.js'
+            ];
+            
+            let filesExist = true;
+            for (const file of files) {
+                const exists = await checkFile(file);
+                if (!exists) {
+                    filesExist = false;
+                    break;
+                }
+            }
+            
+            const test1 = document.getElementById('test-1');
+            const result1 = document.getElementById('result-1');
+            if (filesExist) {
+                test1.className = 'test-item pass';
+                result1.textContent = 'All main files exist ✓';
+            } else {
+                test1.className = 'test-item fail';
+                result1.textContent = 'Some files are missing ✗';
+            }
+
+            // Test 2: Check GSAP
+            setTimeout(() => {
+                const test2 = document.getElementById('test-2');
+                const result2 = document.getElementById('result-2');
+                if (typeof gsap !== 'undefined') {
+                    test2.className = 'test-item pass';
+                    result2.textContent = 'GSAP loaded successfully ✓';
+                } else {
+                    test2.className = 'test-item fail';
+                    result2.textContent = 'GSAP failed to load ✗';
+                }
+            }, 2000);
+
+            // Test 3: Check CSS
+            const test3 = document.getElementById('test-3');
+            const result3 = document.getElementById('result-3');
+            const testEl = document.createElement('div');
+            testEl.style.cssText = 'position: absolute; top: -9999px; --accent: #00c2c7;';
+            document.body.appendChild(testEl);
+            const computedStyle = getComputedStyle(testEl);
+            if (computedStyle.getPropertyValue('--accent')) {
+                test3.className = 'test-item pass';
+                result3.textContent = 'CSS variables working ✓';
+            } else {
+                test3.className = 'test-item fail';
+                result3.textContent = 'CSS variables not working ✗';
+            }
+            document.body.removeChild(testEl);
+
+            // Test 4: Check video elements
+            setTimeout(() => {
+                const test4 = document.getElementById('test-4');
+                const result4 = document.getElementById('result-4');
+                const video = document.createElement('video');
+                video.muted = true;
+                video.playsInline = true;
+                const canPlay = video.canPlayType('video/mp4') !== '';
+                if (canPlay) {
+                    test4.className = 'test-item pass';
+                    result4.textContent = 'Video support available ✓';
+                } else {
+                    test4.className = 'test-item fail';
+                    result4.textContent = 'Video support limited ✗';
+                }
+            }, 1000);
+        }
+
+        // Load GSAP for testing
+        const gsapScript = document.createElement('script');
+        gsapScript.src = 'https://unpkg.com/gsap@3/dist/gsap.min.js';
+        document.head.appendChild(gsapScript);
+
+        // Run tests
+        runTests();
+    </script>
+</body>
+</html>

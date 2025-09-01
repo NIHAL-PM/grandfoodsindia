@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="theme-color" content="#00c2c7" />
+		<title>Grand Foods India — Premium Muffins, Chikki & Snacks Manufacturer</title>
+		<meta name="description" content="Leading food manufacturer in Bangalore offering premium muffins, chikki, biscuits, cookies, and snacks. FSSAI certified with 125+ SKUs. Partner with us for distribution opportunities." />
+		<meta name="keywords" content="muffins, chikki, snacks, biscuits, cookies, food manufacturer, Bangalore, FSSAI certified, wholesale, distribution" />
+		<meta name="author" content="Grand Foods India" />
+		<meta name="robots" content="index, follow" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Grand Foods India — Premium Muffins, Chikki & Snacks Manufacturer" />
+		<meta property="og:description" content="Leading food manufacturer in Bangalore offering premium muffins, chikki, biscuits, cookies, and snacks. FSSAI certified with 125+ SKUs." />
+		<meta property="og:image" content="https://grandfoodsindia.com/assets/img/Grands-Logo-Vector.svg" />
+		<meta property="og:url" content="https://grandfoodsindia.com" />
+		<meta property="og:site_name" content="Grand Foods India" />
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Grand Foods India — Premium Muffins, Chikki & Snacks Manufacturer" />
+		<meta name="twitter:description" content="Leading food manufacturer in Bangalore offering premium muffins, chikki, biscuits, cookies, and snacks. FSSAI certified with 125+ SKUs." />
+		<meta name="twitter:image" content="https://grandfoodsindia.com/assets/img/Grands-Logo-Vector.svg" />
+		
+		<!-- Canonical -->
+		<link rel="canonical" href="https://grandfoodsindia.com" />
+		
+		<link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
+		<link rel="preload" as="image" href="./assets/img/Grands-Logo-Vector.svg" />
+		<link rel="preload" as="image" href="./assets/img/video-poster.svg" />
+		<link rel="stylesheet" href="./assets/vendor/tabler-icons.min.css" />
+		<link rel="stylesheet" href="./assets/css/loading.css" />
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+		<link rel="stylesheet" href="./assets/css/video-fixes.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+	</head>
+	<body class="theme-night">
+		<!-- Scroll progress bar -->
+		<div id="scroll-progress" aria-hidden="true"></div>
+
+		<!-- Page transition overlay -->
+		<div id="page-transition" aria-hidden="true"></div>
+
+		<!-- Modern Navbar -->
+		<header class="navbar" role="banner">
+			<div class="navbar-container">
+				<a class="navbar-brand" href="./" aria-label="Grand Foods India Home">
+					<img class="brand-logo" src="./assets/img/Grands-Logo-Vector.svg" alt="Grand Foods India" />
+				</a>
+
+
+
+				<nav class="navbar-nav" aria-label="Primary">
+					<a class="nav-link active" href="./">Home</a>
+					<a class="nav-link" href="./products.html">Products</a>
+					<a class="nav-link" href="./about.html">About</a>
+					<a class="nav-link" href="./contact.html">Contact</a>
+				</nav>
+
+				<a class="btn nav-cta" href="./products.html">
+					<i class="ti ti-shopping-bag"></i>
+					Explore Products
+				</a>
+
+
+			</div>
+		</header>
+
+
+
+		<main id="content" role="main">
+			<!-- Hero: Dual Video + Content -->
+			<section class="hero" aria-label="Deliciously Different Hero">
+				<div class="hero-bg" aria-hidden="true">
+					<!-- Dual videos stacked; JS handles switching -->
+					<video
+						id="muffin-video"
+						class="hero-video"
+						muted
+						playsinline
+						loop
+						preload="metadata"
+						poster="./assets/img/video-poster.svg"
+					>
+						<source src="./assets/video/muffin_promovideo.mp4" type="video/mp4" />
+					</video>
+					<video
+						id="products-video"
+						class="hero-video portrait-video"
+						muted
+						playsinline
+						loop
+						preload="metadata"
+						poster="./assets/img/video-poster.svg"
+					>
+						<source src="./assets/video/productspromo.mp4" type="video/mp4" />
+					</video>
+
+					<!-- Canvas particles overlay -->
+					<canvas id="particles" aria-hidden="true"></canvas>
+
+					<!-- Fallback visual -->
+					<div class="hero-fallback" aria-hidden="true"></div>
+				</div>
+
+				<div class="hero-inner container">
+					<h1 class="hero-title" data-split>
+						Deliciously <span class="accent">Different</span>
+					</h1>
+					<p class="hero-sub">
+						Crafted with care. Loved across India. Discover premium snacks, biscuits, nuts, and more — made the right way.
+					</p>
+					<div class="hero-ctas">
+						<a class="btn btn-lg btn-victoria" href="./products.html">
+							<i class="ti ti-shopping-cart"></i>
+							Shop Bestsellers
+						</a>
+						<a class="btn btn-lg" href="#journey">
+							<i class="ti ti-rocket"></i>
+							Our Journey
+						</a>
+					</div>
+				</div>
+
+				<!-- Video switch controls -->
+				<div class="video-controls" aria-label="Switch hero video">
+					<button class="video-switch video-switch-btn active" data-video="muffin" type="button">
+						<i class="ti ti-cupcake"></i>
+						Muffin Promo
+					</button>
+					<button class="video-switch video-switch-btn" data-video="products" type="button">
+						<i class="ti ti-packages"></i>
+						Products Promo
+					</button>
+				</div>
+			</section>
+
+			<!-- Featured Categories -->
+			<section class="categories" aria-labelledby="categories-heading">
+				<div class="container">
+					<h2 id="categories-heading" class="section-title">Explore Categories</h2>
+					<div class="category-grid">
+						<a class="category-card parallax" data-depth="0.15" href="./products.html?cat=Biscuits%20%26%20Cookies" aria-label="Shop Biscuits">
+							<img src="./assets/img/products/BUTTER BISCUITS-400.webp" srcset="./assets/img/products/BUTTER BISCUITS-400.webp 400w, ./assets/img/products/BUTTER BISCUITS-800.webp 800w" alt="Butter Biscuits" loading="lazy" />
+							<h3>Biscuits & Cookies</h3>
+						</a>
+						<a class="category-card parallax" data-depth="0.15" href="./products.html?cat=Snacks" aria-label="Shop Snacks">
+							<img src="./assets/img/products/BUTTER MASALA POPCORN-400.webp" srcset="./assets/img/products/BUTTER MASALA POPCORN-400.webp 400w, ./assets/img/products/BUTTER MASALA POPCORN-800.webp 800w" alt="Butter Masala Popcorn" loading="lazy" />
+							<h3>Popcorn & Snacks</h3>
+						</a>
+						<a class="category-card parallax" data-depth="0.15" href="./products.html?cat=Snacks" aria-label="Shop Nuts">
+							<img src="./assets/img/products/ROASTED PEANUT-400.webp" srcset="./assets/img/products/ROASTED PEANUT-400.webp 400w, ./assets/img/products/ROASTED PEANUT-800.webp 800w" alt="Roasted Peanut" loading="lazy" />
+							<h3>Nuts & Pulses</h3>
+						</a>
+						<a class="category-card parallax" data-depth="0.15" href="./products.html?cat=Chikkis" aria-label="Shop Candies">
+							<img src="./assets/img/products/FRUIT CANDIES-400.webp" srcset="./assets/img/products/FRUIT CANDIES-400.webp 400w, ./assets/img/products/FRUIT CANDIES-800.webp 800w" alt="Fruit Candies" loading="lazy" />
+							<h3>Candy & Treats</h3>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Journey / Timeline -->
+					<section id="journey" class="journey-section" aria-labelledby="journey-heading">
+				<div class="container">
+					<h2 id="journey-heading" class="section-title">Our Delicious Journey</h2>
+					<p class="section-subtitle" data-animate>
+						From humble beginnings to a household favorite — we keep raising the bar on taste, quality, and trust.
+					</p>
+
+					<div class="timeline-container timeline-modern" data-animate>
+						<div id="timelineLine" class="timeline-line" aria-hidden="true"></div>
+
+								<!-- Company Founded -->
+								<div class="timeline-item" data-animate>
+									<div class="timeline-content">
+										<span class="timeline-date">Company Founded</span>
+										<div class="timeline-icon"><i class="ti ti-building"></i></div>
+										<h3>Grand Foods India Established</h3>
+										<p>Founded in Bangalore with a vision to create quality food products that are truly Deliciously Different.</p>
+										<div class="timeline-stats">
+											<div class="stat-item">
+												<span class="stat-number" data-value="1">0</span>
+												<span class="stat-label">City</span>
+											</div>
+											<div class="stat-item">
+												<span class="stat-number" data-value="5">0</span>
+												<span class="stat-label">Founders</span>
+											</div>
+										</div>
+									</div>
+									<div class="timeline-marker" data-year="Founded" aria-hidden="true"></div>
+								</div>
+
+								<!-- First Product Launch -->
+								<div class="timeline-item" data-animate>
+									<div class="timeline-content">
+										<span class="timeline-date">First Launch</span>
+										<div class="timeline-icon"><i class="ti ti-cake"></i></div>
+										<h3>Premium Muffin Range Debuts</h3>
+										<p>Our first product line — premium muffins — marks our official entry into food manufacturing.</p>
+										<div class="timeline-stats">
+											<div class="stat-item">
+												<span class="stat-number" data-value="1">0</span>
+												<span class="stat-label">Category</span>
+											</div>
+											<div class="stat-item">
+												<span class="stat-number" data-value="6">0</span>
+												<span class="stat-label">Flavours</span>
+											</div>
+										</div>
+									</div>
+									<div class="timeline-marker" data-year="Launch" aria-hidden="true"></div>
+								</div>
+
+								<!-- Facility Expansion 10,000 sq ft -->
+								<div class="timeline-item" data-animate>
+									<div class="timeline-content">
+										<span class="timeline-date">Expansion</span>
+										<div class="timeline-icon"><i class="ti ti-building-warehouse"></i></div>
+										<h3>Facility Expansion to 10,000 sq ft</h3>
+										<p>Growing demand led to expanding our manufacturing facility to 10,000 sq ft.</p>
+										<div class="timeline-stats">
+											<div class="stat-item">
+												<span class="stat-number" data-value="10000">0</span>
+												<span class="stat-label">Sq Ft</span>
+											</div>
+										</div>
+									</div>
+									<div class="timeline-marker" data-year="10K sq ft" aria-hidden="true"></div>
+								</div>
+
+								<!-- Major Upgrade 20,000 sq ft -->
+								<div class="timeline-item" data-animate>
+									<div class="timeline-content">
+										<span class="timeline-date">Major Upgrade</span>
+										<div class="timeline-icon"><i class="ti ti-building-skyscraper"></i></div>
+										<h3>State-of-the-Art 20,000 sq ft Facility</h3>
+										<p>Upgraded to a modern 20,000 sq ft facility with advanced equipment and technology.</p>
+										<div class="timeline-stats">
+											<div class="stat-item">
+												<span class="stat-number" data-value="20000">0</span>
+												<span class="stat-label">Sq Ft</span>
+											</div>
+										</div>
+									</div>
+									<div class="timeline-marker" data-year="20K sq ft" aria-hidden="true"></div>
+								</div>
+
+								<!-- Serving 3,000+ Retailers -->
+								<div class="timeline-item current" data-animate>
+									<div class="timeline-content">
+										<span class="timeline-date">Milestone</span>
+										<div class="timeline-icon"><i class="ti ti-store"></i></div>
+										<h3>Serving 3,000+ Retailers</h3>
+										<p>Reached a key milestone: 3,000+ retailers across 3 states with 125 SKUs.</p>
+										<div class="timeline-stats">
+											<div class="stat-item">
+												<span class="stat-number" data-value="3000">0</span>
+												<span class="stat-label">Retailers</span>
+											</div>
+											<div class="stat-item">
+												<span class="stat-number" data-value="3">0</span>
+												<span class="stat-label">States</span>
+											</div>
+											<div class="stat-item">
+												<span class="stat-number" data-value="125">0</span>
+												<span class="stat-label">SKUs</span>
+											</div>
+										</div>
+									</div>
+									<div class="timeline-marker current" data-year="3K+" aria-hidden="true"></div>
+								</div>
+
+								<!-- International Expansion Planned -->
+								<div class="timeline-item future" data-animate>
+									<div class="timeline-content">
+										<span class="timeline-date">Next</span>
+										<div class="timeline-icon"><i class="ti ti-world"></i></div>
+										<h3>International Expansion</h3>
+										<p>Planned expansion into Middle East and Southeast Asian markets.</p>
+										<div class="timeline-stats">
+											<div class="stat-item">
+												<span class="stat-number" data-value="2">0</span>
+												<span class="stat-label">Regions</span>
+											</div>
+										</div>
+									</div>
+									<div class="timeline-marker future" data-year="Global" aria-hidden="true"></div>
+								</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Leadership Section -->
+					<section class="about-leadership" aria-labelledby="leadership-heading">
+				<div class="container">
+							<h2 id="leadership-heading" class="section-title">Leadership Team</h2>
+							<p class="leadership-subtitle">Founders and executives steering our vision, quality, and growth.</p>
+
+										<div class="leadership-grid" style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;max-width:1200px;margin:0 auto;">
+											<div style="display:flex;flex:1 1 0;gap:24px;justify-content:center;flex-wrap:wrap;max-width:100%">
+																<article class="leader-card" data-animate>
+																	<div class="leader-avatar"><span class="avatar-text">RG</span></div>
+																	<div class="leader-info">
+																		<h3>Rashid Gazzali</h3>
+																		<p class="leader-title" style="color:#00c2c7">Chairman</p>
+																		<p class="leader-description">Visionary leader guiding the strategic direction and long-term growth of Grand Foods India.</p>
+																	</div>
+																</article>
+																<article class="leader-card" data-animate>
+																	<div class="leader-avatar"><span class="avatar-text">MR</span></div>
+																	<div class="leader-info">
+																		<h3>Muhammed Riyas KU</h3>
+																		<p class="leader-title" style="color:#00c2c7">Co-Founder & Chief Executive Officer</p>
+																		<p class="leader-description">Drives operational excellence and innovation in food manufacturing processes.</p>
+																	</div>
+																</article>
+																<article class="leader-card" data-animate>
+																	<div class="leader-avatar"><span class="avatar-text">HS</span></div>
+																	<div class="leader-info">
+																		<h3>Hashim Sheikh</h3>
+																		<p class="leader-title" style="color:#00c2c7">Co-Founder & Managing Director</p>
+																		<p class="leader-description">Leads business development and strategic partnerships across multiple markets.</p>
+																	</div>
+																</article>
+																<article class="leader-card" data-animate>
+																	<div class="leader-avatar"><span class="avatar-text">MR</span></div>
+																	<div class="leader-info">
+																		<h3>Mujeeb Rahman</h3>
+																		<p class="leader-title" style="color:#00c2c7">Executive Director</p>
+																		<p class="leader-description">Oversees production quality and ensures adherence to highest manufacturing standards.</p>
+																	</div>
+																</article>
+											</div>
+														<div style="display:flex;justify-content:center;width:100%;margin-top:24px;">
+															<article class="leader-card" data-animate>
+																<div class="leader-avatar"><span class="avatar-text">ZA</span></div>
+																<div class="leader-info">
+																	<h3>Zainul Abid</h3>
+																	<p class="leader-title" style="color:#00c2c7">Executive Director</p>
+																	<p class="leader-description">Manages supply chain operations and retailer relationships across all markets.</p>
+																</div>
+															</article>
+														</div>
+											<p class="team-note" style="width:100%;text-align:center;margin-top:32px;">Backed by a dedicated team that makes every bite memorable.</p>
+										</div>
+				</div>
+			</section>
+
+			<!-- CTA Banner -->
+			<section class="cta-banner" aria-labelledby="cta-heading">
+				<div class="container">
+					<h2 id="cta-heading" class="section-title">Ready for Your Next Favorite?</h2>
+					<p class="section-subtitle">Taste the difference in every pack. Order now or connect with us for distribution.</p>
+					<div class="hero-ctas">
+						<a class="btn btn-lg btn-victoria" href="./products.html#bestsellers">
+							<i class="ti ti-star"></i>
+							See Bestsellers
+						</a>
+						<a class="btn btn-lg" href="./contact.html">
+							<i class="ti ti-headset"></i>
+							Contact Sales
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="site-footer" role="contentinfo">
+			<div class="container">
+				<div class="footer-grid">
+					<div class="footer-brand">
+						<img class="logo" src="./assets/img/Grands-Logo-Vector.svg" alt="Grand Foods India" />
+						<p>
+							Grand Foods India brings you a deliciously different range of snacks, biscuits, and treats crafted with
+							quality ingredients and uncompromising standards.
+						</p>
+					</div>
+
+					<nav class="footer-nav" aria-label="Quick Links">
+						<h4>Quick Links</h4>
+						<a href="./">Home</a>
+						<a href="./products.html">Products</a>
+						<a href="./about.html">About</a>
+						<a href="./contact.html">Contact</a>
+					</nav>
+
+					<div class="footer-contact">
+						<h3>Contact</h3>
+						<p>
+							<i class="ti ti-phone"></i>
+							<a href="tel:+919686281458" style="color:inherit;text-decoration:none">+91 96862 81458</a>
+						</p>
+						<p>
+							<i class="ti ti-mail"></i>
+							<a href="mailto:grandfoodsindia1@gmail.com" style="color:inherit;text-decoration:none">grandfoodsindia1@gmail.com</a>
+						</p>
+					</div>
+
+					<div class="footer-social-full" aria-label="Social links">
+						<a class="social-link" href="https://www.instagram.com/grandfoodsindia?igsh=MW9jNm5rcTAyZG02dw==" aria-label="Instagram">
+							<svg viewBox="0 0 24 24" fill="currentColor">
+								<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+							</svg>
+						</a>
+						<a class="social-link" href="https://maps.google.com/maps?q=13.079172134399414%2C77.68775177001953&z=17&hl=en" aria-label="Location">
+							<svg viewBox="0 0 24 24" fill="currentColor">
+								<path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+							</svg>
+						</a>
+						<a class="social-link" href="mailto:grandfoodsindia1@gmail.com" aria-label="Email">
+							<svg viewBox="0 0 24 24" fill="currentColor">
+								<path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/>
+							</svg>
+						</a>
+						<a class="social-link" href="tel:+919686281458" aria-label="Phone">
+							<svg viewBox="0 0 24 24" fill="currentColor">
+								<path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<small>&copy; <span id="year"></span> Grand Foods India. All rights reserved.</small>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Back to top -->
+		<button id="backToTop" aria-label="Back to top" title="Back to top">
+			<i class="ti ti-arrow-up"></i>
+		</button>
+
+		<noscript>
+			<style>
+				.hero-video { display: none !important; }
+				.hero-fallback { opacity: 1 !important; }
+			</style>
+			<div class="container" style="padding: 12px; text-align: center; color: #aac0c0">
+				JavaScript is disabled. Site will display a simplified experience.
+			</div>
+		</noscript>
+
+		<!-- Scripts -->
+		<script>
+			// Set current year in footer
+			(function(){
+				var y = document.getElementById('year');
+				if(y) y.textContent = new Date().getFullYear();
+			})();
+		</script>
+		<script src="./assets/js/loading.js"></script>
+		<script src="./assets/js/main.js"></script>
+		<script src="./assets/js/index.js"></script>
+		<script src="./assets/js/video-content-fix.js"></script>
+
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Organization",
+		  "name": "Grand Foods India",
+		  "description": "Leading food manufacturer in Bangalore offering premium muffins, chikki, biscuits, cookies, and snacks.",
+		  "url": "https://grandfoodsindia.com",
+		  "logo": "https://grandfoodsindia.com/assets/img/Grands-Logo-Vector.svg",
+		  "contactPoint": {
+			"@type": "ContactPoint",
+			"telephone": "+919686281458",
+			"contactType": "customer service",
+			"areaServed": "IN",
+			"availableLanguage": "English"
+		  },
+		  "sameAs": [
+			"https://www.instagram.com/grandfoodsindia",
+			"https://www.facebook.com/grandfoodsindia",
+			"https://www.linkedin.com/company/grandfoodsindia"
+		  ],
+		  "foundingDate": "2021",
+		  "foundingLocation": {
+			"@type": "Place",
+			"name": "Bangalore, India"
+		  },
+		  "address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Bangalore",
+			"addressCountry": "IN"
+		  }
+		}
+		</script>
+	</body>
+	</html>
+

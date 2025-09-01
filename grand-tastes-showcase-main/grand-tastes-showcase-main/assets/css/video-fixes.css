@@ -1,0 +1,106 @@
+/* Video-specific body classes for advanced styling */
+html.showing-products-video .hero-bg {
+  background-color: rgba(0, 0, 0, 0.6); /* Darker background for portrait video */
+}
+
+html.showing-muffin-video .hero-bg {
+  background-color: rgba(0, 0, 0, 0.4); /* Slightly lighter for square video */
+}
+
+/* Desktop-focused video enhancements */
+.portrait-video {
+  max-height: 100%;
+  width: auto !important;
+  height: 100% !important;
+  margin: 0 auto;
+  object-position: center 40% !important; /* Focus on top-center of content */
+}
+
+/* Desktop optimization (min-width 992px) */
+@media (min-width: 992px) {
+  #products-video {
+    object-fit: cover !important;
+    object-position: center 35% !important; /* Show more top content on desktop */
+    transform: scale(1.02); /* Slight scale to ensure proper fill */
+  }
+}
+
+/* Desktop-focused optimizations */
+/* Standard desktop */
+@media (min-width: 992px) and (max-width: 1439px) {
+  #products-video {
+    object-fit: cover !important;
+    transform: scale(1.05);
+    object-position: center 40% !important; /* Focus on visible content */
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  #products-video {
+    object-fit: cover !important;
+    object-position: center 38% !important; /* Show more of the upper content */
+    transform: scale(1.02); /* Subtle scale to ensure proper filling */
+  }
+}
+
+/* Extra-large desktop */
+@media (min-width: 1920px) {
+  #products-video {
+    object-fit: cover !important; 
+    object-position: center 35% !important; /* Further adjust for very wide screens */
+  }
+}
+
+/* Desktop hero container optimization */
+@media (min-width: 992px) {
+  .hero {
+    min-height: 90vh; /* Increased height for desktop */
+    overflow: hidden !important; /* Prevent any overflow */
+  }
+  
+  .hero-bg {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+/* Video container styling for desktop */
+.hero-video {
+  background-color: #000 !important; /* Ensure black background */
+}
+
+/* Ensure video controls are visible */
+.video-controls {
+  bottom: 40px !important; /* Position lower on desktop */
+}
+
+/* Improve video-switching controls on desktop */
+@media (min-width: 992px) {
+  .video-controls {
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .hero:hover .video-controls {
+    opacity: 1;
+  }
+}
+
+/* ==========================
+   Desktop: show ENTIRE video
+   Force contain so no cropping occurs
+   ========================== */
+@media (min-width: 992px) {
+  #muffin-video,
+  #products-video,
+  .portrait-video {
+    /* Fill container width/height; allow safe cropping for a full-bleed hero */
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #000 !important;
+  }
+}

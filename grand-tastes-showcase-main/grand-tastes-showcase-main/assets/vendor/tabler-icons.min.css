@@ -1,0 +1,147 @@
+/**
+ * Tabler Icons - Unicode Implementation
+ * Contains only the icons used in the project
+ * No external font dependencies required
+ */
+
+.ti {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: inherit;
+}
+
+/* Heart Icon */
+.ti-heart:before {
+  content: "♡";
+}
+
+.ti-heart-filled:before {
+  content: "♥";
+}
+
+/* Menu Icons */
+.ti-menu-2:before {
+  content: "☰";
+}
+
+.ti-x:before {
+  content: "✕";
+}
+
+/* Arrow Icons */
+.ti-arrow-right:before {
+  content: "→";
+}
+
+.ti-arrow-left:before {
+  content: "←";
+}
+
+.ti-arrow-up:before {
+  content: "↑";
+}
+
+.ti-arrow-down:before {
+  content: "↓";
+}
+
+/* Social Icons */
+.ti-brand-instagram:before {
+  content: "📷";
+}
+
+.ti-brand-facebook:before {
+  content: "📘";
+}
+
+.ti-brand-twitter:before {
+  content: "🐦";
+}
+
+.ti-brand-linkedin:before {
+  content: "💼";
+}
+
+/* Common Icons */
+.ti-phone:before {
+  content: "📞";
+}
+
+.ti-mail:before {
+  content: "✉";
+}
+
+.ti-location:before {
+  content: "📍";
+}
+
+.ti-clock:before {
+  content: "🕐";
+}
+
+.ti-star:before {
+  content: "⭐";
+}
+
+.ti-star-filled:before {
+  content: "★";
+}
+
+.ti-check:before {
+  content: "✓";
+}
+
+.ti-plus:before {
+  content: "+";
+}
+
+.ti-minus:before {
+  content: "−";
+}
+
+.ti-search:before {
+  content: "🔍";
+}
+
+.ti-shopping-cart:before {
+  content: "🛒";
+}
+
+.ti-user:before {
+  content: "👤";
+}
+
+.ti-home:before {
+  content: "🏠";
+}
+
+.ti-info-circle:before {
+  content: "ℹ";
+}
+
+.ti-alert-circle:before {
+  content: "⚠";
+}
+
+.ti-external-link:before {
+  content: "🔗";
+}
+
+/* Loading/Spinner */
+.ti-loader:before {
+  content: "⟳";
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
