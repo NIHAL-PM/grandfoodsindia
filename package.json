@@ -1,0 +1,26 @@
+{
+  "name": "grand-foods-india",
+  "version": "1.0.0",
+  "description": "Grand Foods India - Premium food manufacturer in Bangalore offering muffins, chikki, biscuits, cookies, and snacks",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build process required'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "food",
+    "muffins",
+    "snacks",
+    "bangalore",
+    "grand-foods"
+  ],
+  "author": "Grand Foods India",
+  "license": "MIT",
+  "homepage": "https://grandfoodsindia.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NIHAL-PM/grandfoodsindia.git"
+  }
+}
